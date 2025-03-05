@@ -117,7 +117,7 @@ nav {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center;
     background: var(--navy);
     padding: 15px;
@@ -146,6 +146,7 @@ nav {
     font-size: 28px;
     cursor: pointer;
     color: white;
+    left: 20px !important;
 }
 
 .mobile-menu {
