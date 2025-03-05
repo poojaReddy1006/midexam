@@ -1,4 +1,3 @@
-
 :root {
 
     --main-radius: 5px;
@@ -89,7 +88,7 @@ footer {
 }
 
 p {
-    line-height: 1.6; 
+    line-height: 1.6;
     font-size: 16px;
 }
 
@@ -97,10 +96,12 @@ h1 {
     font-size: 28px;
     font-weight: bold;
 }
+
 h2 {
     font-size: 24px;
     font-weight: bold;
 }
+
 h3 {
     font-size: 20px;
     font-weight: 600;
@@ -115,31 +116,25 @@ nav {
 }
 
 .navbar {
-    display: grid;
-    place-items: center;
-    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--navy);
+    padding: 15px;
+    border-radius: var(--main-radius);
 }
-
 
 .nav-links {
+    display: flex;
     list-style: none;
-    display: grid;
-    margin: 0;
-    padding: 0;
-    grid-auto-flow: column;
-    gap: 10px;
-}
-
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 15px;
 }
 
 .nav-links a {
-    text-decoration: underline;
     color: white;
+    text-decoration: none;
     font-size: 16px;
-    transition: 0.3s;
+    padding: 10px;
 }
 
 .nav-links a:hover {
@@ -155,13 +150,14 @@ nav {
 
 .mobile-menu {
     display: none;
+    flex-direction: column;
     background: var(--navy);
-    text-align: center;
-    position: absolute;
-    top: 60px;
     width: 100%;
-    left: 0;
-    z-index: 999;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    z-index: 1000;
+    position: relative;
 }
 
 .mobile-menu ul {
@@ -177,19 +173,41 @@ nav {
 .mobile-menu ul li a {
     color: white;
     text-decoration: none;
-    display: block;
-    padding: 10px;
     font-size: 18px;
+    display: block;
 }
 
 .mobile-menu ul li a:hover {
     background: #4062bb;
 }
 
-.photo-name
-{
+.mobile-menu.show {
+    display: flex;
+    height: auto;
+}
+
+.container.menu-expanded {
+    margin-top: 150px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 700px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+
+
+
+.photo-name {
     text-align: center;
 }
+
 .photo-style {
     width: 100%;
 }
@@ -243,8 +261,8 @@ nav {
 .read-more:hover {
     background: #4062bb;
 }
-.about-style
-{
+
+.about-style {
     text-align: center;
 }
 
@@ -374,14 +392,13 @@ nav {
     color: #333;
     margin-top: 5px;
 }
-#contact
-{
+
+#contact {
     color: white;
     background-color: var(--navy);
 }
 
-.heading
-{
+.heading {
     text-align: center;
 }
 
@@ -393,13 +410,12 @@ nav {
     grid-auto-flow: column;
 }
 
-.contact-image
-{
+.contact-image {
     width: 30px;
 }
 
 .back-to-top {
-    text-align: right; 
+    text-align: right;
     padding: 10px 0;
     margin-left: 20px;
 }
@@ -408,7 +424,7 @@ nav {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    background: #52489c; 
+    background: #52489c;
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
@@ -419,49 +435,33 @@ nav {
 }
 
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
 
-    .nav-links {
-        display: none;
+    .container {
+
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "photo"
+            "about"
+            "publications"
+            "sidebar"
+            "blogs"
+            "album"
+            "footer"
+
+
+
+        ;
+
+        height: 100vh;
+
+        background-color: aliceblue;
+        color: black;
     }
-
-    .hamburger-menu {
-        display: block;
-        position: fixed;
-        right: 25px;
-    }
-
-    .mobile-menu.show {
-        display: block;
-        animation: fadeIn 0.3s ease-in-out;
-        margin-left: 12px;
-    }
-
-.container{
-
-display: grid;
-grid-gap: 0.5rem;
-grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-columns: 1fr ;
-grid-template-areas:
-"nav"
-"photo"
-"about"
-"publications"
-"sidebar"
-"blogs"
-"album"
-"footer"
-
-
-
-;
-
-height: 100vh;
-
-background-color: aliceblue;
-color:black;
-}
 }
 
 @keyframes fadeIn {
@@ -469,9 +469,9 @@ color:black;
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-

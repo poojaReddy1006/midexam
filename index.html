@@ -14,12 +14,9 @@
 
     <div class="container">
 
-        <nav>
-
+        <nav class="menu">
             <div class="navbar">
-                <div class="hamburger-menu" onclick="toggleMenu()">☰
-
-                </div>
+                <span class="hamburger-menu" onclick="toggleMenu()">☰</span>
                 <ul class="nav-links">
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#publications">PUBLICATIONS</a></li>
@@ -28,20 +25,20 @@
                     <li><a href="#album">ALBUM</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
-
-                <div class="mobile-menu">
-                    <ul>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#publications">PUBLICATIONS</a></li>
-                        <li><a href="#sidebar">HOBBIES</a></li>
-                        <li><a href="#blogs">BLOGS</a></li>
-                        <li><a href="#album">ALBUM</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </div>
             </div>
 
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#publications">PUBLICATIONS</a></li>
+                    <li><a href="#sidebar">HOBBIES</a></li>
+                    <li><a href="#blogs">BLOGS</a></li>
+                    <li><a href="#album">ALBUM</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
         </nav>
+
         <div id="photo">
             <div id="photo">
                 <div class="photo-container">
@@ -117,40 +114,43 @@
         <div id="blogs">
             <h2 class="heading">BLOGS</h2>
             <div class="blog-container">
-        
+
                 <div class="blog-card">
                     <a href="https://www.space.com/17661-theory-general-relativity.html">
                         <img src="1_4OX1ChWg6l7qnx6k4mEyGQ.jpg" alt="Theory of Relativity">
                     </a>
                     <div class="blog-content">
-                        <h3><a href="https://www.space.com/17661-theory-general-relativity.html">Understanding Einstein’s Theory of Relativity</a></h3>
+                        <h3><a href="https://www.space.com/17661-theory-general-relativity.html">Understanding
+                                Einstein’s Theory of Relativity</a></h3>
                         <p>How space and time are interconnected...</p>
                     </div>
                 </div>
-        
+
                 <div class="blog-card">
                     <a href="https://www.amnh.org/exhibitions/einstein/legacy/quantum-theory">
                         <img src="qmimage.webp" alt="Quantum Mechanics">
                     </a>
                     <div class="blog-content">
-                        <h3><a href="https://www.amnh.org/exhibitions/einstein/legacy/quantum-theory">Einstein and Quantum Mechanics</a></h3>
+                        <h3><a href="https://www.amnh.org/exhibitions/einstein/legacy/quantum-theory">Einstein and
+                                Quantum Mechanics</a></h3>
                         <p>doubted quantum entanglement...</p>
                     </div>
                 </div>
-        
+
                 <div class="blog-card">
                     <a href="https://plato.stanford.edu/entries/einstein-philscience/">
                         <img src="40ab527f0ffa5cfd14585caa2bbd6bc4.jpg" alt="Einstein Philosophy">
                     </a>
                     <div class="blog-content">
-                        <h3><a href="https://plato.stanford.edu/entries/einstein-philscience/">The Philosophy of Einstein</a></h3>
+                        <h3><a href="https://plato.stanford.edu/entries/einstein-philscience/">The Philosophy of
+                                Einstein</a></h3>
                         <p>How the ideas shaped modern thought...</p>
                     </div>
                 </div>
-        
+
             </div>
         </div>
-        
+
         <div id="album">
 
             <h2 class="heading">ALBUM</h2>
@@ -204,10 +204,10 @@
                     <img class="contact-image" src="Gmail_icon_(2020).svg.png" alt="Email">
                 </a>
                 <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-                    <img class="contact-image" src="linkedin.webp" alt="LinkedIn" >
+                    <img class="contact-image" src="linkedin.webp" alt="LinkedIn">
                 </a>
                 <a href="https://github.com/yourgithub" target="_blank">
-                    <img class="contact-image" src="icone-github-rouge.png" alt="GitHub" >
+                    <img class="contact-image" src="icone-github-rouge.png" alt="GitHub">
                 </a>
                 <a href="https://wa.me/yourphonenumber" target="_blank">
                     <img class="contact-image" src="whatsapp.webp" alt="WhatsApp">
@@ -223,7 +223,7 @@
         </footer>
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
 function toggleMenu() {
-    var menu = document.querySelector(".mobile-menu");
+    var menu = document.getElementById("mobileMenu");
     menu.classList.toggle("show");
 }
